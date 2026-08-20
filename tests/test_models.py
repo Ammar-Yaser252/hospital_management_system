@@ -2,11 +2,13 @@ from src.models.person import Person
 from src.models.doctor import Doctor
 from src.models.patient import Patient
 from src.models.medical_record import MedicalRecord
+from src.models.appointment import Appointment
 
 first_person = Person("Ali", "101", 45, "01150650812")  # person object
 first_doctor = Doctor("John", "1001", 50, "011556600882", "Oncology") # doctor object
 first_patient = Patient("Ahmed", "10001", 15, "012665588002", "A+") # patient object
 first_record = MedicalRecord() 
+booking = Appointment(first_doctor, first_patient, "2026-10-10  11:00 AM")
 
 
 print (f"Name: {first_person.name}, ID: {first_person.id_number}, Age: {first_person.age}, Contact: {first_person.contact_info}")
@@ -22,3 +24,5 @@ print (first_record.get_history())
 
 first_patient.record.write_prescription("Take 1 brufen when needed")
 print (first_patient.record.get_history())
+
+print(f"Doctor: {booking.doctor.name}, Patient: {booking.patient.name}, Date: {booking.date_time}")
