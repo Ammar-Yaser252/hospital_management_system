@@ -5,3 +5,6 @@ class Doctor(Person):
         super().__init__(name, id_number, age, contact_info)
         self.specialization = specialization
         self.available_slots = []
+
+    def write_prescription_for(self, patient, note):
+        patient.record.write_prescription(note)

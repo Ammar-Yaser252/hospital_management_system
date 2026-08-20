@@ -26,3 +26,6 @@ first_patient.record.write_prescription("Take 1 brufen when needed")
 print (first_patient.record.get_history())
 
 print(f"Doctor: {booking.doctor.name}, Patient: {booking.patient.name}, Date: {booking.date_time}")
+
+first_doctor.write_prescription_for(first_patient, "Rest for 3 days")
+print(first_patient.record.get_history())
