@@ -41,3 +41,9 @@ first_doctor.delete_appointment(second_appointment)
 
 print(first_patient.patient_appointments)
 print(first_doctor.doctor_appointments)
+
+
+
+first_doctor.add_slot("Monday 9:00 AM")
+first_doctor.add_slot("Monday 10:00 AM")
+print(first_doctor.available_slots)

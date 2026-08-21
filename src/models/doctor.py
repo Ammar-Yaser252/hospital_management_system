@@ -17,3 +17,7 @@ class Doctor(Person):
         # added the same Appointment object to both - otherwise they'd go out of sync.
         self.doctor_appointments.remove(appointment)
         appointment.patient.patient_appointments.remove(appointment)
+
+    def add_slot(self, slot):
+        # Lets a doctor add a time they're free for - just used by the GUI's slot list for now
+        self.available_slots.append(slot)
