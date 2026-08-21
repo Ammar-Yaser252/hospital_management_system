@@ -29,3 +29,10 @@ print(f"Doctor: {booking.doctor.name}, Patient: {booking.patient.name}, Date: {b
 
 first_doctor.write_prescription_for(first_patient, "Rest for 3 days")
 print(first_patient.record.get_history())
+
+
+second_appointment = first_patient.book_appointment(first_doctor, "2026-11-05 2:00 PM")
+
+print(first_patient.patient_appointments)
+print(first_doctor.doctor_appointments)
+print(second_appointment.doctor.name, second_appointment.date_time)
