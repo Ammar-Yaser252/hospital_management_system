@@ -9,3 +9,7 @@ class Doctor(Person):
 
     def write_prescription_for(self, patient, note):
         patient.record.write_prescription(note)
+
+    def delete_appointment(self, appointment):
+        self.doctor_appointments.remove(appointment)
+        appointment.patient.patient_appointments.remove(appointment)
