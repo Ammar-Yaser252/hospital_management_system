@@ -6,15 +6,15 @@ from src.models.doctor import Doctor
 from src.models.patient import Patient
 
 # ---- Sample data (temporary, until a real data source/database is added) ----
-current_doctor = Doctor("Dr.Rabe3", "1001", 50, "01560925837", "Internal medicine")
+current_doctor = Doctor("Dr.Ahmed Hasan", "1001", 50, "01560925837", "Internal medicine")
 current_doctor.add_slot("09:00 AM")
 current_doctor.add_slot("10:00 AM")
 current_doctor.add_slot("11:00 AM")
 
 patients = [
-    Patient("Fza3", "101", 35, "01295831679", "A+"),
-    Patient("Hagras", "102", 30, "01097263455", "A-"),
-    Patient("Hadeya", "103", 32, "01191736548", "B-"),
+    Patient("Ali Ahmed", "101", 35, "01295831679", "A+"),
+    Patient("Sayed Abbas", "102", 30, "01097263455", "A-"),
+    Patient("Mona Mohammed", "103", 32, "01191736548", "B-"),
 ]
 
 # ---- Main window ----
